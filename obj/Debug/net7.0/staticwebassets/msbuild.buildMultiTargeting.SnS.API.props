@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SnS.API.props" />
+</Project>

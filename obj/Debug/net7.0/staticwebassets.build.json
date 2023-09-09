@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2SjOmdKuDE8qEZATr9FtP1gc3T5z0qcFuGfPde7CiaU=",
+  "Source": "SnS.API",
+  "BasePath": "_content/SnS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
