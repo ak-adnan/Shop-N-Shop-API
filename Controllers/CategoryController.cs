@@ -116,5 +116,28 @@ namespace SnS.API.Controllers
             return Ok(categoryDto);
 
         }
+
+        //Delete Category
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public IActionResult Delete ([FromRoute] Guid id)
+        {
+            var categoryDomain = dbContext.Categories.FirstOrDefault(x => x.Id == id);
+            if (categoryDomain == null)
+            {
+                return NotFound();
+            }
+            dbContext.Categories.Remove(categoryDomain);
+            dbContext.SaveChanges();
+
+
+            var categoryDto = new CategoryDto
+            {
+                Id = categoryDomain.Id,
+                Name = categoryDomain.Name,
+                Description = categoryDomain.Description
+            };
+            return Ok(categoryDto);
+        }
     }
 }
